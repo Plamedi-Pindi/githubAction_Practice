@@ -1,0 +1,24 @@
+name: Workflow Variable
+
+on:
+  push:
+    branches: [ "master" ]
+
+  workflow_dispatch:
+
+env:
+  first_name: Plamedi
+
+jobs:
+  greeting_job:
+    runs-on: ubuntu-latest
+    env:
+     last_name: Pindi
+     
+    steps:
+      - name: Say hello
+        env: 
+         job: Developer
+        run: echo "Hello, this is $first_name $last_name and hi is a $job"!
+
+    
