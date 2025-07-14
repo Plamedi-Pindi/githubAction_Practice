@@ -1,0 +1,21 @@
+
+name: Context Variable
+
+on:
+  push:
+    branches: [ "master" ]
+
+  workflow_dispatch:
+
+jobs:
+  test_context_variable:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: use_context_variable
+        run: |
+          echo "WF Name: ${{github.woriflow}}"
+          echo "Repository name: ${{github.repository}}"
+          echo "Triggered by: ${{github.triggering_actor}}"
