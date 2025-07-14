@@ -19,6 +19,6 @@ jobs:
       - name: Say hello
         env: 
          job: Developer
-        run: echo "Hello, this is $first_name $last_name and hi is a $job"!
+        run: echo "Hello, this is $first_name $last_name and hi is a $job and is working in ${{vars.PROJECTNAME}}"!
 
     
