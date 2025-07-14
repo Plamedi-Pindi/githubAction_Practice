@@ -16,6 +16,6 @@ jobs:
 
       - name: use_context_variable
         run: |
-          echo "WF Name: ${{github.woriflow}}"
+          echo "WF Name: ${{github.workflow}}"
           echo "Repository name: ${{github.repository}}"
           echo "Triggered by: ${{github.triggering_actor}}"
