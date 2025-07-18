@@ -1,0 +1,26 @@
+name: Workflow Input
+
+on:
+  workflow_dispatch:
+    inputs:
+      number1:
+        description: 'First number'
+        default: '0'
+        required: true
+      number2:
+        description: 'Secound number'
+        default: '0'
+        required: true
+
+jobs:
+  add-bumber:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Add number
+        run: echo Hello, world!
+
+      - name: Run a multi-line script
+        run: |
+          echo Add other actions to build,
+          echo test, and deploy your project.
